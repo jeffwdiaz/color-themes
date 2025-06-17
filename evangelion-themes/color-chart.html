@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evangelion Color Chart</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #e0e0e0;
+        color: #333333;
+        padding: 20px;
+      }
+      .color-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .color-item {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 8px;
+      }
+      .color-square {
+        width: 200px;
+        height: 200px;
+        border: 2px solid #e1d6f8;
+        margin-right: 25px;
+      }
+      .color-info {
+        flex-grow: 1;
+      }
+      .color-name {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .color-hex {
+        font-family: monospace;
+        font-size: 0.9em;
+        color: #a1a0ad;
+      }
+      .copy-button {
+        background-color: #5b2b41;
+        color: #e1d6f8;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .copy-button:hover {
+        background-color: #67478a;
+      }
+      .copy-button.copied {
+        background-color: #8bd450;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Evangelion Color Chart</h1>
+    <div class="color-grid">
+      <div class="color-item">
+        <div class="color-square" style="background-color: #201430"></div>
+        <div class="color-info">
+          <div class="color-name">Background</div>
+          <div class="color-hex">#201430</div>
+        </div>
+        <button class="copy-button" data-color="#201430">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #000000"></div>
+        <div class="color-info">
+          <div class="color-name">Core</div>
+          <div class="color-hex">#000000</div>
+        </div>
+        <button class="copy-button" data-color="#000000">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #101010"></div>
+        <div class="color-info">
+          <div class="color-name">Dispair</div>
+          <div class="color-hex">#101010</div>
+        </div>
+        <button class="copy-button" data-color="#101010">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #111111"></div>
+        <div class="color-info">
+          <div class="color-name">Tokyo3</div>
+          <div class="color-hex">#111111</div>
+        </div>
+        <button class="copy-button" data-color="#111111">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #151515"></div>
+        <div class="color-info">
+          <div class="color-name">Fear</div>
+          <div class="color-hex">#151515</div>
+        </div>
+        <button class="copy-button" data-color="#151515">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #201430"></div>
+        <div class="color-info">
+          <div class="color-name">Midnight</div>
+          <div class="color-hex">#201430</div>
+        </div>
+        <button class="copy-button" data-color="#201430">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #222222"></div>
+        <div class="color-info">
+          <div class="color-name">Selee</div>
+          <div class="color-hex">#222222</div>
+        </div>
+        <button class="copy-button" data-color="#222222">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #39274c"></div>
+        <div class="color-info">
+          <div class="color-name">Casper</div>
+          <div class="color-hex">#39274C</div>
+        </div>
+        <button class="copy-button" data-color="#39274C">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #39274d"></div>
+        <div class="color-info">
+          <div class="color-name">Balthasar</div>
+          <div class="color-hex">#39274D</div>
+        </div>
+        <button class="copy-button" data-color="#39274D">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #402c56"></div>
+        <div class="color-info">
+          <div class="color-name">Melchior</div>
+          <div class="color-hex">#402C56</div>
+        </div>
+        <button class="copy-button" data-color="#402C56">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #43492a"></div>
+        <div class="color-info">
+          <div class="color-name">Gehirn</div>
+          <div class="color-hex">#43492A</div>
+        </div>
+        <button class="copy-button" data-color="#43492A">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #444444"></div>
+        <div class="color-info">
+          <div class="color-name">Lost</div>
+          <div class="color-hex">#444444</div>
+        </div>
+        <button class="copy-button" data-color="#444444">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #452f5c"></div>
+        <div class="color-info">
+          <div class="color-name">S2 Engine</div>
+          <div class="color-hex">#452F5C</div>
+        </div>
+        <button class="copy-button" data-color="#452F5C">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #483160"></div>
+        <div class="color-info">
+          <div class="color-name">Longingus</div>
+          <div class="color-hex">#483160</div>
+        </div>
+        <button class="copy-button" data-color="#483160">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #5b2b41"></div>
+        <div class="color-info">
+          <div class="color-name">Nerv</div>
+          <div class="color-hex">#5B2B41</div>
+        </div>
+        <button class="copy-button" data-color="#5B2B41">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #666666"></div>
+        <div class="color-info">
+          <div class="color-name">Fog</div>
+          <div class="color-hex">#666666</div>
+        </div>
+        <button class="copy-button" data-color="#666666">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #67478a"></div>
+        <div class="color-info">
+          <div class="color-name">Mari</div>
+          <div class="color-hex">#67478A</div>
+        </div>
+        <button class="copy-button" data-color="#67478A">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #875faf"></div>
+        <div class="color-info">
+          <div class="color-name">Unit01</div>
+          <div class="color-hex">#875FAF</div>
+        </div>
+        <button class="copy-button" data-color="#875FAF">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #87ff5f"></div>
+        <div class="color-info">
+          <div class="color-name">Kaworu</div>
+          <div class="color-hex">#87FF5F</div>
+        </div>
+        <button class="copy-button" data-color="#87FF5F">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #8bd450"></div>
+        <div class="color-info">
+          <div class="color-name">Kozo</div>
+          <div class="color-hex">#8BD450</div>
+        </div>
+        <button class="copy-button" data-color="#8BD450">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #8edf5f"></div>
+        <div class="color-info">
+          <div class="color-name">Terminal Dogma</div>
+          <div class="color-hex">#8EDF5F</div>
+        </div>
+        <button class="copy-button" data-color="#8EDF5F">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #9f50e1"></div>
+        <div class="color-info">
+          <div class="color-name">Ritsuko</div>
+          <div class="color-hex">#9F50E1</div>
+        </div>
+        <button class="copy-button" data-color="#9F50E1">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #9cda7c"></div>
+        <div class="color-info">
+          <div class="color-name">Kaji</div>
+          <div class="color-hex">#9CDA7C</div>
+        </div>
+        <button class="copy-button" data-color="#9CDA7C">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #a1a0ad"></div>
+        <div class="color-info">
+          <div class="color-name">Shinji</div>
+          <div class="color-hex">#A1A0AD</div>
+        </div>
+        <button class="copy-button" data-color="#A1A0AD">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #a4d2ec"></div>
+        <div class="color-info">
+          <div class="color-name">Adam</div>
+          <div class="color-hex">#A4D2EC</div>
+        </div>
+        <button class="copy-button" data-color="#A4D2EC">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #ab92fc"></div>
+        <div class="color-info">
+          <div class="color-name">Dummy Plug</div>
+          <div class="color-hex">#AB92FC</div>
+        </div>
+        <button class="copy-button" data-color="#AB92FC">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #ada4a0"></div>
+        <div class="color-info">
+          <div class="color-name">Gendo</div>
+          <div class="color-hex">#ADA4A0</div>
+        </div>
+        <button class="copy-button" data-color="#ADA4A0">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #b968fc"></div>
+        <div class="color-info">
+          <div class="color-name">AT Field</div>
+          <div class="color-hex">#B968FC</div>
+        </div>
+        <button class="copy-button" data-color="#B968FC">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #c586c0"></div>
+        <div class="color-info">
+          <div class="color-name">Asuska</div>
+          <div class="color-hex">#C586C0</div>
+        </div>
+        <button class="copy-button" data-color="#C586C0">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #ce67f0"></div>
+        <div class="color-info">
+          <div class="color-name">Lilith</div>
+          <div class="color-hex">#CE67F0</div>
+        </div>
+        <button class="copy-button" data-color="#CE67F0">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #db6088"></div>
+        <div class="color-info">
+          <div class="color-name">Misato</div>
+          <div class="color-hex">#DB6088</div>
+        </div>
+        <button class="copy-button" data-color="#DB6088">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #d4d4d4"></div>
+        <div class="color-info">
+          <div class="color-name">Angel</div>
+          <div class="color-hex">#D4D4D4</div>
+        </div>
+        <button class="copy-button" data-color="#D4D4D4">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #d99145"></div>
+        <div class="color-info">
+          <div class="color-name">LCL</div>
+          <div class="color-hex">#D99145</div>
+        </div>
+        <button class="copy-button" data-color="#D99145">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #e1d6f8"></div>
+        <div class="color-info">
+          <div class="color-name">Rei</div>
+          <div class="color-hex">#E1D6F8</div>
+        </div>
+        <button class="copy-button" data-color="#E1D6F8">Copy</button>
+      </div>
+      <div class="color-item">
+        <div class="color-square" style="background-color: #e6bb85"></div>
+        <div class="color-info">
+          <div class="color-name">Pen Pen</div>
+          <div class="color-hex">#E6BB85</div>
+        </div>
+        <button class="copy-button" data-color="#E6BB85">Copy</button>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".copy-button").forEach((button) => {
+        button.addEventListener("click", async () => {
+          const color = button.getAttribute("data-color");
+          try {
+            await navigator.clipboard.writeText(color);
+            button.textContent = "Copied!";
+            button.classList.add("copied");
+            setTimeout(() => {
+              button.textContent = "Copy";
+              button.classList.remove("copied");
+            }, 2000);
+          } catch (err) {
+            console.error("Failed to copy color:", err);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

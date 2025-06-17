@@ -1,0 +1,21 @@
+{
+  "name": "evangelion-themes",
+  "displayName": "Evangelion Themes",
+  "description": "Color themes based on evangelion.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "eva-unit-01",
+        "uiTheme": "vs-dark",
+        "path": "./themes/eva-unit-01-color-theme.json"
+      }
+    ]
+  }
+}
